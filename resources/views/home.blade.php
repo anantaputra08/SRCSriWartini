@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 @section('content')
-<div class="bg-gray-50 max-h-screen">
+<div class="bg-gray-50 rounded-3xl max-h-screen">
     <div class="container mx-auto px-4 py-8 lg:px-8">
         <main>
             {{-- Banner Section with Enhanced Styling --}}
