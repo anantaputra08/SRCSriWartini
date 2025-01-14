@@ -10,6 +10,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
+use Filament\Forms;
 
 class ShopProfile extends Page
 {
@@ -32,16 +33,22 @@ class ShopProfile extends Page
     {
         return $form
             ->schema([
-                TextInput::make('name')
-                    ->required(),
-                TextInput::make('email')
-                    ->email()
-                    ->required(),
-                TextInput::make('phone')
-                    ->tel()
-                    ->required(),
-                Textarea::make('address')
-                    ->required(),
+                Forms\Components\Card::make()
+                    ->schema([
+                        Forms\Components\Grid::make(2) // Membagi form menjadi 2 kolom
+                            ->schema([
+                                TextInput::make('name')
+                                    ->required(),
+                                TextInput::make('email')
+                                    ->email()
+                                    ->required(),
+                                TextInput::make('phone')
+                                    ->tel()
+                                    ->required(),
+                                Textarea::make('address')
+                                    ->required(),
+                            ]),
+                    ])
             ])
             ->statePath('data');
     }
