@@ -23,7 +23,8 @@
         <div
             class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
             <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                <header class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-red-500 to-orange-600 dark:bg-red-7000 shadow-2xl">
+                <header
+                    class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-red-500 to-orange-600 dark:bg-red-7000 shadow-2xl">
                     <div class="container mx-auto flex justify-between items-center py-4 px-6">
                         <a href="{{ url('/') }}"
                             class="text-2xl font-light tracking-wider text-white hover:text-gray-300 transition-colors duration-300 ease-in-out">
@@ -33,6 +34,10 @@
                             <a href="{{ url('/') }}"
                                 class="rounded-md px-3 py-2 text-white ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
                                 Home
+                            </a>
+                            <a href="{{ route('products.index') }}"
+                                class="rounded-md px-3 py-2 text-white ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                Product
                             </a>
                             <a href="{{ route('about') }}"
                                 class="rounded-md px-3 py-2 text-white ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
